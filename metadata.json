@@ -1,0 +1,6 @@
+{
+  "name": "Vicky_Joe Cosmetics & Jewelry",
+  "description": "A premium e-commerce platform for cosmetics and fine jewelry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
