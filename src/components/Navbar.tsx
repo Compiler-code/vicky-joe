@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, User, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 
 export function Navbar() {
@@ -14,7 +14,7 @@ export function Navbar() {
           <div className="flex-1 md:hidden flex items-center">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-800 hover:text-gray-500 transition-colors"
+              className="text-gray-800 hover:text-gray-500 transition-colors duration-300"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
@@ -27,10 +27,10 @@ export function Navbar() {
 
           {/* Desktop Links - Left */}
           <div className="hidden md:flex flex-1 items-center space-x-8">
-            <Link to="/shop" className="text-sm tracking-widest uppercase hover:text-gray-600 transition-colors">
+            <Link to="/shop" className="text-sm tracking-widest uppercase hover:text-gray-600 transition-colors duration-300">
               Jewelry
             </Link>
-            <Link to="/shop?category=cosmetics" className="text-sm tracking-widest uppercase hover:text-gray-600 transition-colors">
+            <Link to="/shop?category=cosmetics" className="text-sm tracking-widest uppercase hover:text-gray-600 transition-colors duration-300">
               Cosmetics
             </Link>
           </div>
@@ -44,12 +44,6 @@ export function Navbar() {
 
           {/* Right Icons */}
           <div className="flex-1 flex items-center justify-end space-x-4 md:space-x-6">
-            <button className="text-gray-800 hover:text-gray-500 transition-colors" aria-label="Search">
-              <Search className="w-5 h-5 stroke-[1.5]" />
-            </button>
-            <button className="text-gray-800 hover:text-gray-500 transition-colors" aria-label="Account">
-              <User className="w-5 h-5 stroke-[1.5]" />
-            </button>
           </div>
         </div>
       </div>
@@ -61,7 +55,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 overflow-hidden md:hidden shadow-lg"
           >
              <div className="flex flex-col space-y-6 py-8 px-4 text-center">

@@ -17,27 +17,24 @@ export function Footer() {
           <div>
             <h4 className="text-xs tracking-widest uppercase font-semibold mb-6">Shop</h4>
             <ul className="space-y-4 text-sm text-gray-500">
-              <li><Link to="/shop?category=jewelry" className="hover:text-black transition-colors">Fine Jewelry</Link></li>
-              <li><Link to="/shop?category=cosmetics" className="hover:text-black transition-colors">Cosmetics & Beauty</Link></li>
-              <li><Link to="/shop" className="hover:text-black transition-colors">New Arrivals</Link></li>
-              <li><Link to="/shop" className="hover:text-black transition-colors">Best Sellers</Link></li>
+              <li><Link to="/shop?category=jewelry" className="hover:text-black transition-colors duration-300">Fine Jewelry</Link></li>
+              <li><Link to="/shop?category=cosmetics" className="hover:text-black transition-colors duration-300">Cosmetics & Beauty</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-xs tracking-widest uppercase font-semibold mb-6">Client Care</h4>
             <ul className="space-y-4 text-sm text-gray-500">
-              <li><a href="#" className="hover:text-black transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">Shipping & Returns</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">Track Order</a></li>
+              <li><Link to="/contact" className="hover:text-black transition-colors duration-300">Contact Us</Link></li>
+              <li><Link to="/shipping-returns" className="hover:text-black transition-colors duration-300">Shipping & Returns</Link></li>
+              <li><Link to="/faq" className="hover:text-black transition-colors duration-300">FAQ</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
           <p>&copy; {new Date().getFullYear()} Vicky_Joe Cosmetics & Jewelry. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-black transition-colors duration-300">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-black transition-colors duration-300">Terms of Service</Link>
           </div>
         </div>
       </div>

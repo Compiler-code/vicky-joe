@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ProductCard } from '../components/ProductCard';
-import { products } from '../data';
+import { useProducts } from '../context/ProductContext';
 
 export function Home() {
+  const { products } = useProducts();
   const featuredProducts = products.filter(p => p.featured).slice(0, 4);
 
   return (
@@ -42,7 +43,7 @@ export function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="pt-8"
           >
-            <Link to="/shop" className="bg-white text-black px-8 py-4 text-xs tracking-widest uppercase hover:bg-gray-100 transition-colors">
+            <Link to="/shop" className="bg-white text-black px-8 py-4 text-xs tracking-widest uppercase hover:bg-gray-100 transition-colors duration-300">
               Explore Collection
             </Link>
           </motion.div>
@@ -61,7 +62,7 @@ export function Home() {
           ))}
         </div>
         <div className="text-center mt-12 md:mt-16">
-          <Link to="/shop" className="inline-block border border-black px-12 py-4 text-xs tracking-widest uppercase hover:bg-black hover:text-white transition-colors">
+          <Link to="/shop" className="inline-block border border-black px-12 py-4 text-xs tracking-widest uppercase hover:bg-black hover:text-white transition-all duration-500">
             View All
           </Link>
         </div>
