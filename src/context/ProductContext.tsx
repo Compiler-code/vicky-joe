@@ -13,7 +13,7 @@ const ProductContext = createContext<ProductContextType | undefined>(undefined);
 
 export function ProductProvider({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>(() => {
-    const savedProducts = localStorage.getItem('vickyjoe_products_v4');
+    const savedProducts = localStorage.getItem('vickyjoe_products_v5');
     if (savedProducts) {
       try {
         return JSON.parse(savedProducts);
@@ -25,7 +25,7 @@ export function ProductProvider({ children }: { children: ReactNode }) {
   });
 
   useEffect(() => {
-    localStorage.setItem('vickyjoe_products_v4', JSON.stringify(products));
+    localStorage.setItem('vickyjoe_products_v5', JSON.stringify(products));
   }, [products]);
 
   const addProduct = (product: Product) => {

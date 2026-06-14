@@ -28,7 +28,7 @@ export function ProductDetails() {
   }
 
   const handleWhatsAppOrder = () => {
-    const phoneNumber = '2348000000000'; // Target phone number
+    const phoneNumber = '2347084382462'; // Target phone number
     const message = `Hello Vicky_Joe Cosmetics & Jewelry, I would like to order: ${product.name} (₦${product.price.toLocaleString()})`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

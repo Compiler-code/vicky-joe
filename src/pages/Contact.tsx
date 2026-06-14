@@ -15,7 +15,7 @@ export function Contact() {
         </div>
         <div>
           <h2 className="text-xs tracking-widest uppercase font-semibold text-black mb-2">WhatsApp / Phone</h2>
-          <p className="text-gray-500 font-light">+234 800 000 0000</p>
+          <p className="text-gray-500 font-light">+234 708 438 2462</p>
         </div>
         <div>
           <h2 className="text-xs tracking-widest uppercase font-semibold text-black mb-2">Hours</h2>
